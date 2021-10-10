@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sce-CO-lb5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lista" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RGh-ED-tcY">
+                                <rect key="frame" x="0.0" y="80" width="414" height="728"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaAlumno" rowHeight="82" id="H7A-eN-bpj" customClass="celdaAlumnoController" customModule="Lista" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H7A-eN-bpj" id="m55-cS-mch">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matricula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLf-5N-gxk">
+                                                    <rect key="frame" x="47" y="50" width="71" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promedio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCt-gv-JHq">
+                                                    <rect key="frame" x="310" y="37" width="73" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del alumno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFz-vI-fQU">
+                                                    <rect key="frame" x="47" y="11" width="200" height="27"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="aCt-gv-JHq" secondAttribute="trailing" constant="11" id="NDK-aV-zth"/>
+                                                <constraint firstItem="bFz-vI-fQU" firstAttribute="top" secondItem="m55-cS-mch" secondAttribute="topMargin" id="Qtl-nV-8Qg"/>
+                                                <constraint firstItem="tLf-5N-gxk" firstAttribute="bottom" secondItem="m55-cS-mch" secondAttribute="bottomMargin" id="W29-rX-oe6"/>
+                                                <constraint firstItem="aCt-gv-JHq" firstAttribute="top" secondItem="m55-cS-mch" secondAttribute="topMargin" constant="26" id="a3V-lo-EOx"/>
+                                                <constraint firstItem="tLf-5N-gxk" firstAttribute="leading" secondItem="m55-cS-mch" secondAttribute="leadingMargin" constant="27" id="qOe-oY-HhC"/>
+                                                <constraint firstItem="bFz-vI-fQU" firstAttribute="leading" secondItem="m55-cS-mch" secondAttribute="leadingMargin" constant="27" id="rck-Cv-PA7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblMatricula" destination="tLf-5N-gxk" id="IFT-2B-leg"/>
+                                            <outlet property="lblNombre" destination="bFz-vI-fQU" id="xXO-ri-EYd"/>
+                                            <outlet property="lblPromedio" destination="aCt-gv-JHq" id="v97-CN-ZeV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="V4D-dz-POR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1eu-FG-05d"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJO-rN-Svj">
+                                <rect key="frame" x="20" y="56" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Volver"/>
+                                <connections>
+                                    <action selector="doTapVolver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dkF-CM-hd6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RGh-ED-tcY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KJd-aN-eiL"/>
+                            <constraint firstItem="RGh-ED-tcY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="O03-AR-GNe"/>
+                            <constraint firstItem="RGh-ED-tcY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="h7A-KC-oLn"/>
+                            <constraint firstItem="RGh-ED-tcY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="pPr-xa-9sj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PMO-Dl-TKl">
+            <objects>
+                <viewController id="Sce-CO-lb5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ncz-zb-I4n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxN-5C-62L">
+                                <rect key="frame" x="42" y="82" width="154" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Lista de alumnos"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="qzU-gg-6Tp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xhe-T2-hhO"/>
+                        <color key="backgroundColor" red="0.98507569179999999" green="0.8111886087451402" blue="0.98245666102109708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjl-9R-hMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-567" y="139"/>
+        </scene>
+    </scenes>
+</document>
